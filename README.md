@@ -47,7 +47,7 @@
 
 ### $hashRouter.init()
 
-· 执行路由初始化工作，在配置好路由后执行。
+- 执行路由初始化工作，在配置好路由后执行。
 
 ### $hashRouter.listen(event)
 
