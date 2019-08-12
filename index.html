@@ -7,6 +7,28 @@
     <title>hash-router-demo</title>
 </head>
 <body>
-    
+    <ul>
+        <li>
+            <a href="#first">first page</a>
+            <a href="#second">second page</a>
+            <a href="#third">third page</a>
+        </li>
+    </ul>
+    <div id="content"></div>
 </body>
+<script src="./hash-router.js"></script>
+<script>
+    window.onload = function() {
+        // 配置跳转的路由 如果发生跳转，会执行render，render中执行这个回调函数
+        $hashRouter.route('first',()=>{
+            console.log('first click');
+            $hashRouter
+            document.getElementById('content').innerHTML='<button>there is the first page</button>';
+        });
+        // 配置404页面
+        $hashRouter.notFound('<button>404</button>');
+        // $hashRouter.notFound = 
+        $hashRouter.init();
+    }
+</script>
 </html>
