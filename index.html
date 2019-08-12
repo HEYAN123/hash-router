@@ -21,13 +21,13 @@
     window.onload = function() {
         // 配置跳转的路由 如果发生跳转，会执行render，render中执行这个回调函数
         $hashRouter.route('first',()=>{
-            console.log('first click');
-            $hashRouter
             document.getElementById('content').innerHTML='<button>there is the first page</button>';
         });
         // 配置404页面
-        $hashRouter.notFound('<button>404</button>');
-        // $hashRouter.notFound = 
+        $hashRouter.notFound(()=>{
+            document.getElementById('content').innerHTML='<button>404!</button>';
+        });
+        // 初始化
         $hashRouter.init();
     }
 </script>
