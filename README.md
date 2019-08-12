@@ -12,7 +12,7 @@
 <script src="./hash-router.js"></script>
 ```
 
-- 使用a标签配置路由
+- 使用a标签配置路由，并配置页面容器
 
 ```html
 <li>
@@ -20,6 +20,8 @@
     <a href="#second">second page</a>
     <a href="#third">third page</a>
 </li>
+
+<div id="content"></div>
 ```
 
 - 使用js调用方法注册路由
